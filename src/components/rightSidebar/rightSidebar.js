@@ -1,0 +1,49 @@
+import React from 'react';
+import Typography from '@material-ui/core/Typography';
+import useStyle from './style';
+import Grid from "@material-ui/core/Grid";
+import { ButtonBase } from '@material-ui/core';
+
+const hashtags = [
+    "خبرهای_داغ",
+    "ویروس_کرونا",
+    "قیمت_دلار",
+    "بورس",
+    "هنر"
+]
+
+const RightSidebar = () => {
+    const classes = useStyle();
+
+    return (
+        <div className={classes.root}>
+            <Grid container direction={"row"} alignItems={"center"}>
+                <Grid>
+                    <img src={"images/logo.png"} />
+                </Grid>
+                <Grid item>
+                    <Typography className={classes.logoType}>
+                        توییتر فارسی
+                    </Typography>
+                </Grid>
+            </Grid>
+            <Typography className={classes.hashtagTitle}>
+                داغ ترین هشتگ ها
+            </Typography>
+            <Grid container direction={"column"} alignItems={"center"}>
+                {hashtags.map(item =>
+                    <ButtonBase className={classes.hashtagParent}>
+                        <Grid item container>
+                            <img src={"images/hashtag.png"} />
+                            <Typography className={classes.hashtag}>
+                                {item}
+                            </Typography>
+                        </Grid>
+                    </ButtonBase>
+                )}
+            </Grid>
+        </div>
+    )
+}
+
+export default RightSidebar;
