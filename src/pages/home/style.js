@@ -3,7 +3,8 @@ import {makeStyles} from "@material-ui/styles";
 const useStyles = makeStyles(theme => ({
   root: {
     backgroundColor: '#e6e6e6',
-    flex:1
+    flex:1,
+    overflowY:'auto'
   },
   header: {
     padding: 18,
@@ -84,7 +85,12 @@ const useStyles = makeStyles(theme => ({
     width:"60px", 
     height:"60px",
     borderRadius:"50%",
+    heighi: 'max-content'
   },
+  tweetGrid:{
+    flex:1,
+    marginRight:'1rem'
+  }
 }));
 
 
