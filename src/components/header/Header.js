@@ -2,7 +2,7 @@ import React from 'react';
 import useStyles from '../style';
 import Typography from '@material-ui/core/Typography';
 
-const Header = ({title,icon}) => {
+const Home = ({title,icon}) => {
     const classes = useStyles();
     return (
         <div className={classes.header}>
@@ -14,4 +14,4 @@ const Header = ({title,icon}) => {
     )
 }
 
-export default Header;
+export default Home;

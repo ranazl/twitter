@@ -6,7 +6,14 @@ import Typography from '@material-ui/core/Typography';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 
 const Tweet = ({ data }) => {
+
+    //$& for replace
+    const renderTweet = (text) => {
+        return {__html: text.replace(/#\S+/g, "<a href='/tags/$&' style='color:blue'>$&</a>")}
+    }
+
     const classes = useStyles();
+
     return (
         <div className={classes.tweetItem}>
             <Grid container>
@@ -18,9 +25,10 @@ const Tweet = ({ data }) => {
                     </Grid>
                 </Grid>
             </Grid>
-            <Typography className={classes.tweetText}>
-                {data.text}
-            </Typography>
+
+            {/* replaceing text */}
+            <Typography dangerouslySetInnerHTML={renderTweet(data.text)} className={classes.tweetText}/>
+
             <Grid container direction={'row-reverse'} style={{ marginTop: 16 }}>
                 <IconButton className={classes.newTweetImgBtn}>
                     <img src={"images/retweet.png"} className={classes.newTweetImg} />

@@ -1,10 +1,9 @@
 import React from 'react';
-import useStyles from './style';
-import Header from './components/Header';
-import NewTwitte from './components/NewTwitte';
-import TweetList from './components/TweetList';
+import useStyles from '../../pages/home/style';
+import Header from '../../pages/home/components/Header';
+import NewTwitte from '../../pages/home/components/NewTwitte';
+import TweetList from '../../pages/home/components/TweetList';
 import Divider from '@material-ui/core/Divider';
-import {Home as HomeIcon} from '@material-ui/icons';
 
 const tweets = [
     {
@@ -57,11 +56,11 @@ const tweets = [
     },
 ]
 
-const Home = () => {
+const TweetsByHashtag = () => {
     const classes = useStyles();
     return (
         <div className={classes.root}>
-            <Header title={"خانه"} icon={<HomeIcon/>}/>
+            <Header title={"نوستالژی"} icon={<img src={"images/hashtag.png"}/>}/>
             <Divider className={classes.divider} />
             <NewTwitte />
             <TweetList data={tweets} />
@@ -69,4 +68,4 @@ const Home = () => {
     )
 }
 
-export default Home;
+export default TweetsByHashtag;
