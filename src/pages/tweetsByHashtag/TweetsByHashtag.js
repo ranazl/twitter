@@ -10,7 +10,7 @@ const tweets = [
         sender: {
             name: "atefe",
             id: "@atefeVl",
-           img: "images/atefe.jpg"
+           img: "/images/atefe.jpg"
         },
         text: " ﺑﻬﺘﺮﯾﻦ وﻋﺪه ﻏﺬاﯾﯽ ﺑﺎ اﺧﺘﻼف زﯾﺎدی ﺻﺒﺤﺎﻧﺴﺖ ﭼﻮن ﻣﻤﮑﻦ ﻧﯿﺴﺖ ﺑﺮای #ﺻﺒﺤﺎﻧﻪ #کرفس رﺳﺖ ﮐﻨﻪ ﺧﻮرﺷﺖ "
     },
@@ -18,7 +18,7 @@ const tweets = [
         sender: {
             name: "ghazal",
             id: "@ghazalZl",
-            img: "images/ghazal.jpg"
+            img: "/images/ghazal.jpg"
         },
         text: "#هوای_پاک و اسمان آبس را #دوست_رادم"
     },
@@ -26,7 +26,7 @@ const tweets = [
         sender: {
             name: "atefe",
             id: "@atefeVl",
-           img: "images/atefe.jpg"
+           img: "/images/atefe.jpg"
         },
         text: " ﺑﻬﺘﺮﯾﻦ وﻋﺪه ﻏﺬاﯾﯽ ﺑﺎ اﺧﺘﻼف زﯾﺎدی ﺻﺒﺤﺎﻧﺴﺖ ﭼﻮن ﻣﻤﮑﻦ ﻧﯿﺴﺖ ﺑﺮای #ﺻﺒﺤﺎﻧﻪ #کرفس رﺳﺖ ﮐﻨﻪ ﺧﻮرﺷﺖ "
     },
@@ -34,7 +34,7 @@ const tweets = [
         sender: {
             name: "ghazal",
             id: "@ghazalZl",
-            img: "images/ghazal.jpg"
+            img: "/images/ghazal.jpg"
         },
         text: "#هوای_پاک و اسمان آبس را #دوست_رادم"
     },
@@ -42,7 +42,7 @@ const tweets = [
         sender: {
             name: "atefe",
             id: "@atefeVl",
-           img: "images/atefe.jpg"
+           img: "/images/atefe.jpg"
         },
         text: " ﺑﻬﺘﺮﯾﻦ وﻋﺪه ﻏﺬاﯾﯽ ﺑﺎ اﺧﺘﻼف زﯾﺎدی ﺻﺒﺤﺎﻧﺴﺖ ﭼﻮن ﻣﻤﮑﻦ ﻧﯿﺴﺖ ﺑﺮای #ﺻﺒﺤﺎﻧﻪ #کرفس رﺳﺖ ﮐﻨﻪ ﺧﻮرﺷﺖ "
     },
@@ -50,17 +50,17 @@ const tweets = [
         sender: {
             name: "ghazal",
             id: "@ghazalZl",
-            img: "images/ghazal.jpg"
+            img: "/images/ghazal.jpg"
         },
         text: "#هوای_پاک و اسمان آبس را #دوست_رادم"
     },
 ]
 
-const TweetsByHashtag = () => {
+const TweetsByHashtag = (props) => {
     const classes = useStyles();
     return (
         <div className={classes.root}>
-            <Header title={"نوستالژی"} icon={<img src={"images/hashtag.png"}/>}/>
+            <Header title={props.match.params.hashtag} icon={<img src={"/images/hashtag.png"}/>}/>
             <Divider className={classes.divider} />
             <NewTwitte />
             <TweetList data={tweets} />

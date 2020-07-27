@@ -10,7 +10,7 @@ const NewTwitte = () => {
     return (
         <div className={classes.newTweet}>
             <Grid container>
-                <img src={"images/girl.jpg"} className={classes.profile}/>
+                <img src={"/images/girl.jpg"} className={classes.profile}/>
                 <div contentEditable  data-placeholder="توییت کن ..." className={classnames(classes.input,"editable")}>
                 </div>
             </Grid>
@@ -19,7 +19,7 @@ const NewTwitte = () => {
                     توییت
                </Button>
                <IconButton className={classes.newTweetImgBtn}>
-               <img src={"images/tweetpic.png"} className={classes.newTweetImg}/>
+               <img src={"/images/tweetpic.png"} className={classes.newTweetImg}/>
                </IconButton>
             </Grid>
         </div>

@@ -11,7 +11,7 @@ const tweets = [
         sender: {
             name: "atefe",
             id: "@atefeVl",
-           img: "images/atefe.jpg"
+           img: "/images/atefe.jpg"
         },
         text: " ﺑﻬﺘﺮﯾﻦ وﻋﺪه ﻏﺬاﯾﯽ ﺑﺎ اﺧﺘﻼف زﯾﺎدی ﺻﺒﺤﺎﻧﺴﺖ ﭼﻮن ﻣﻤﮑﻦ ﻧﯿﺴﺖ ﺑﺮای #ﺻﺒﺤﺎﻧﻪ #کرفس رﺳﺖ ﮐﻨﻪ ﺧﻮرﺷﺖ "
     },
@@ -19,7 +19,7 @@ const tweets = [
         sender: {
             name: "ghazal",
             id: "@ghazalZl",
-            img: "images/ghazal.jpg"
+            img: "/images/ghazal.jpg"
         },
         text: "#هوای_پاک و اسمان آبس را #دوست_رادم"
     },
@@ -27,7 +27,7 @@ const tweets = [
         sender: {
             name: "atefe",
             id: "@atefeVl",
-           img: "images/atefe.jpg"
+           img: "/images/atefe.jpg"
         },
         text: " ﺑﻬﺘﺮﯾﻦ وﻋﺪه ﻏﺬاﯾﯽ ﺑﺎ اﺧﺘﻼف زﯾﺎدی ﺻﺒﺤﺎﻧﺴﺖ ﭼﻮن ﻣﻤﮑﻦ ﻧﯿﺴﺖ ﺑﺮای #ﺻﺒﺤﺎﻧﻪ #کرفس رﺳﺖ ﮐﻨﻪ ﺧﻮرﺷﺖ "
     },
@@ -35,7 +35,7 @@ const tweets = [
         sender: {
             name: "ghazal",
             id: "@ghazalZl",
-            img: "images/ghazal.jpg"
+            img: "/images/ghazal.jpg"
         },
         text: "#هوای_پاک و اسمان آبس را #دوست_رادم"
     },
@@ -43,7 +43,7 @@ const tweets = [
         sender: {
             name: "atefe",
             id: "@atefeVl",
-           img: "images/atefe.jpg"
+           img: "/images/atefe.jpg"
         },
         text: " ﺑﻬﺘﺮﯾﻦ وﻋﺪه ﻏﺬاﯾﯽ ﺑﺎ اﺧﺘﻼف زﯾﺎدی ﺻﺒﺤﺎﻧﺴﺖ ﭼﻮن ﻣﻤﮑﻦ ﻧﯿﺴﺖ ﺑﺮای #ﺻﺒﺤﺎﻧﻪ #کرفس رﺳﺖ ﮐﻨﻪ ﺧﻮرﺷﺖ "
     },
@@ -51,7 +51,7 @@ const tweets = [
         sender: {
             name: "ghazal",
             id: "@ghazalZl",
-            img: "images/ghazal.jpg"
+            img: "/images/ghazal.jpg"
         },
         text: "#هوای_پاک و اسمان آبس را #دوست_رادم"
     },

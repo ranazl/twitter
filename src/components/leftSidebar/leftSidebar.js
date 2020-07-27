@@ -3,11 +3,12 @@ import Typography from '@material-ui/core/Typography';
 import useStyle from './style';
 import Grid from "@material-ui/core/Grid";
 import { Divider, ButtonBase } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 
 const Twitter = ({ name, id, img }) => {
     const classes = useStyle();
     return (
-        <ButtonBase style={{width: "100%"}}>
+        <ButtonBase style={{ width: "100%" }}>
             <Grid container direction={"row"} className={classes.tweeterParent}>
                 <img src={img} className={classes.profile} />
                 <Grid item container direction={"column"} alignItems={"flex-start"} className={classes.tweeterNameParent}>
@@ -23,31 +24,31 @@ const twitter = [
     {
         name: "Rana",
         id: "@ranaZl",
-        img: "images/rana.jpg"
+        img: "/images/rana.jpg"
 
     },
     {
         name: "Ghazal",
         id: "@GhazalZl",
-        img: "images/ghazal.jpg"
+        img: "/images/ghazal.jpg"
 
     },
     {
         name: "Elahe",
         id: "@ElaheMv",
-        img: "images/elahe.jpg"
+        img: "/images/elahe.jpg"
 
     },
     {
         name: "Afrooz",
         id: "@AfroozKg",
-        img: "images/afrooz.jpg"
+        img: "/images/afrooz.jpg"
 
     },
     {
         name: "Atefe",
         id: "@AtefeVl",
-        img: "images/atefe.jpg"
+        img: "/images/atefe.jpg"
 
     },
 ]
@@ -58,7 +59,7 @@ const LefttSidebar = () => {
     return (
         <div className={classes.root}>
             <Grid container direction={"row-reverse"}>
-                <img src={"images/girl.jpg"} className={classes.profile} />
+                <img src={"/images/girl.jpg"} className={classes.profile} />
                 <Grid item container direction={"column"} className={classes.profText}>
                     <Typography className={classes.profName}>تانیا مرادی</Typography>
                     <Typography className={classes.profId}>Tania.Moradi</Typography>
@@ -70,16 +71,16 @@ const LefttSidebar = () => {
                 <Divider className={classes.divider} />
                 {
                     twitter.map((item, index) => {
-                        return <div>
+                        return (<Link to={`/users/${item.name}`} style={{width:"100%"}}>
                             <Twitter name={item.name} id={item.id} img={item.img} />
                             {index !== twitter.length - 1 &&
-                                <Divider className={classes.divider} />
-                            }
-                        </div>
-                    }
-                    )}
+                            <Divider className={classes.divider} />
+                        }
+                           </Link> )
+                }
+                        )}
             </Grid>
-        </div>
+        </div>                
     )
 }
 
