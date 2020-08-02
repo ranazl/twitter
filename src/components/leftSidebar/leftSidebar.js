@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Typography from '@material-ui/core/Typography';
 import useStyle from './style';
 import Grid from "@material-ui/core/Grid";
 import { Divider, ButtonBase } from '@material-ui/core';
 import { Link } from 'react-router-dom';
+import {getUsers} from '../../api/api_tweet';
 
 const Twitter = ({ name, id, img }) => {
     const classes = useStyle();
@@ -20,41 +21,19 @@ const Twitter = ({ name, id, img }) => {
     )
 }
 
-const twitter = [
-    {
-        name: "Rana",
-        id: "@ranaZl",
-        img: "/images/rana.jpg"
-
-    },
-    {
-        name: "Ghazal",
-        id: "@GhazalZl",
-        img: "/images/ghazal.jpg"
-
-    },
-    {
-        name: "Elahe",
-        id: "@ElaheMv",
-        img: "/images/elahe.jpg"
-
-    },
-    {
-        name: "Afrooz",
-        id: "@AfroozKg",
-        img: "/images/afrooz.jpg"
-
-    },
-    {
-        name: "Atefe",
-        id: "@AtefeVl",
-        img: "/images/atefe.jpg"
-
-    },
-]
 
 const LefttSidebar = () => {
     const classes = useStyle();
+
+    const [users,setUsers] = useState ([]);
+
+    useEffect(() => {
+        getUsers((isOk,data) => {
+            if(!isOk)
+            return alert(data.message);
+            else setUsers(data);
+        });
+    }, []);
 
     return (
         <div className={classes.root}>
@@ -70,10 +49,10 @@ const LefttSidebar = () => {
                 <Typography className={classes.tweeterTitle}>بهترین خبرنگاران</Typography>
                 <Divider className={classes.divider} />
                 {
-                    twitter.map((item, index) => {
+                    users.map((item, index) => {
                         return (<Link to={`/users/${item.name}`} style={{width:"100%"}}>
                             <Twitter name={item.name} id={item.id} img={item.img} />
-                            {index !== twitter.length - 1 &&
+                            {index !== users.length - 1 &&
                             <Divider className={classes.divider} />
                         }
                            </Link> )

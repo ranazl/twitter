@@ -1,69 +1,33 @@
-import React from 'react';
+import React , { useState, useEffect } from 'react';
 import useStyles from './style';
 import Header from './components/Header';
-import NewTwitte from './components/NewTwitte';
+import NewTweete from './components/NewTweete';
 import TweetList from './components/TweetList';
 import Divider from '@material-ui/core/Divider';
 import {Home as HomeIcon} from '@material-ui/icons';
+import {getAllTweets} from "../../api/api_tweet";
 
-const tweets = [
-    {
-        sender: {
-            name: "atefe",
-            id: "@atefeVl",
-           img: "/images/atefe.jpg"
-        },
-        text: " ﺑﻬﺘﺮﯾﻦ وﻋﺪه ﻏﺬاﯾﯽ ﺑﺎ اﺧﺘﻼف زﯾﺎدی ﺻﺒﺤﺎﻧﺴﺖ ﭼﻮن ﻣﻤﮑﻦ ﻧﯿﺴﺖ ﺑﺮای #ﺻﺒﺤﺎﻧﻪ #کرفس رﺳﺖ ﮐﻨﻪ ﺧﻮرﺷﺖ "
-    },
-    {
-        sender: {
-            name: "ghazal",
-            id: "@ghazalZl",
-            img: "/images/ghazal.jpg"
-        },
-        text: "#هوای_پاک و اسمان آبس را #دوست_رادم"
-    },
-    {
-        sender: {
-            name: "atefe",
-            id: "@atefeVl",
-           img: "/images/atefe.jpg"
-        },
-        text: " ﺑﻬﺘﺮﯾﻦ وﻋﺪه ﻏﺬاﯾﯽ ﺑﺎ اﺧﺘﻼف زﯾﺎدی ﺻﺒﺤﺎﻧﺴﺖ ﭼﻮن ﻣﻤﮑﻦ ﻧﯿﺴﺖ ﺑﺮای #ﺻﺒﺤﺎﻧﻪ #کرفس رﺳﺖ ﮐﻨﻪ ﺧﻮرﺷﺖ "
-    },
-    {
-        sender: {
-            name: "ghazal",
-            id: "@ghazalZl",
-            img: "/images/ghazal.jpg"
-        },
-        text: "#هوای_پاک و اسمان آبس را #دوست_رادم"
-    },
-    {
-        sender: {
-            name: "atefe",
-            id: "@atefeVl",
-           img: "/images/atefe.jpg"
-        },
-        text: " ﺑﻬﺘﺮﯾﻦ وﻋﺪه ﻏﺬاﯾﯽ ﺑﺎ اﺧﺘﻼف زﯾﺎدی ﺻﺒﺤﺎﻧﺴﺖ ﭼﻮن ﻣﻤﮑﻦ ﻧﯿﺴﺖ ﺑﺮای #ﺻﺒﺤﺎﻧﻪ #کرفس رﺳﺖ ﮐﻨﻪ ﺧﻮرﺷﺖ "
-    },
-    {
-        sender: {
-            name: "ghazal",
-            id: "@ghazalZl",
-            img: "/images/ghazal.jpg"
-        },
-        text: "#هوای_پاک و اسمان آبس را #دوست_رادم"
-    },
-]
+
+
 
 const Home = () => {
     const classes = useStyles();
+
+    const [tweets,setTweets] = useState ([]);
+
+    useEffect(() => {
+        getAllTweets((isOk,data) => {
+            if(!isOk)
+            return alert(data.message);
+            else setTweets(data);
+        });
+    }, []);
+
     return (
         <div className={classes.root}>
             <Header title={"خانه"} icon={<HomeIcon/>}/>
             <Divider className={classes.divider} />
-            <NewTwitte />
+            <NewTweete />
             <TweetList data={tweets} />
         </div>
     )

@@ -14,7 +14,7 @@ const App = () => {
                     <Switch>
                         <Route exact path={"/"} component={Home} />
                         <Route exact path={"/hashtags/:hashtag"} component={TweetsByHashtag} />
-                        <Route exact path={"/users/:user"} component={TweetsByUser} /> */}
+                        <Route exact path={"/users/:user"} component={TweetsByUser} />
                         <Route component={P404} />
                     </Switch>
                 </Layout>

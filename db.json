@@ -1,0 +1,92 @@
+{
+  "tweets": [
+    {
+      "sender": {
+          "name": "atefe",
+          "id": "@atefeVl",
+         "img": "/images/atefe.jpg"
+      },
+      "text": " ﺑﻬﺘﺮﯾﻦ وﻋﺪه ﻏﺬاﯾﯽ ﺑﺎ اﺧﺘﻼف زﯾﺎدی ﺻﺒﺤﺎﻧﺴﺖ ﭼﻮن ﻣﻤﮑﻦ ﻧﯿﺴﺖ ﺑﺮای #ﺻﺒﺤﺎﻧﻪ #کرفس رﺳﺖ ﮐﻨﻪ ﺧﻮرﺷﺖ "
+  },
+  {
+      "sender": {
+          "name": "ghazal",
+          "id": "@ghazalZl",
+          "img": "/images/ghazal.jpg"
+      },
+      "text": "#هوای_پاک و اسمان آبس را #دوست_رادم"
+  },
+  {
+      "sender": {
+          "name": "atefe",
+          "id": "@atefeVl",
+         "img": "/images/atefe.jpg"
+      },
+      "text": " ﺑﻬﺘﺮﯾﻦ وﻋﺪه ﻏﺬاﯾﯽ ﺑﺎ اﺧﺘﻼف زﯾﺎدی ﺻﺒﺤﺎﻧﺴﺖ ﭼﻮن ﻣﻤﮑﻦ ﻧﯿﺴﺖ ﺑﺮای #ﺻﺒﺤﺎﻧﻪ #کرفس رﺳﺖ ﮐﻨﻪ ﺧﻮرﺷﺖ "
+  },
+  {
+      "sender": {
+          "name": "ghazal",
+          "id": "@ghazalZl",
+          "img": "/images/ghazal.jpg"
+      },
+      "text": "#هوای_پاک و اسمان آبس را #دوست_رادم"
+  },
+  {
+      "sender": {
+          "name": "atefe",
+          "id": "@atefeVl",
+         "img": "/images/atefe.jpg"
+      },
+      "text": " ﺑﻬﺘﺮﯾﻦ وﻋﺪه ﻏﺬاﯾﯽ ﺑﺎ اﺧﺘﻼف زﯾﺎدی ﺻﺒﺤﺎﻧﺴﺖ ﭼﻮن ﻣﻤﮑﻦ ﻧﯿﺴﺖ ﺑﺮای #ﺻﺒﺤﺎﻧﻪ #کرفس رﺳﺖ ﮐﻨﻪ ﺧﻮرﺷﺖ "
+  },
+  {
+      "sender": {
+          "name": "ghazal",
+          "id": "@ghazalZl",
+          "img": "/images/ghazal.jpg"
+      },
+      "text": "#هوای_پاک و اسمان آبس را #دوست_رادم"
+  }
+      ],
+
+      "hashtags" : [
+        "خبرهای_داغ",
+        "ویروس_کرونا",
+        "قیمت_دلار",
+        "بورس",
+        "هنر"
+    ],
+    "users" : [
+      {
+          "name": "Rana",
+          "id": "@ranaZl",
+          "img": "/images/rana.jpg"
+  
+      },
+      {
+          "name": "Ghazal",
+          "id": "@GhazalZl",
+          "img": "/images/ghazal.jpg"
+  
+      },
+      {
+          "name": "Elahe",
+          "id": "@ElaheMv",
+          "img": "/images/elahe.jpg"
+  
+      },
+      {
+          "name": "Afrooz",
+          "id": "@AfroozKg",
+          "img": "/images/afrooz.jpg"
+  
+      },
+      {
+          "name": "Atefe",
+          "id": "@AtefeVl",
+          "img": "/images/atefe.jpg"
+  
+      }
+  ]
+}

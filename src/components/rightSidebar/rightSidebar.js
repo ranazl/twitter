@@ -1,20 +1,24 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Typography from '@material-ui/core/Typography';
 import useStyle from './style';
 import Grid from "@material-ui/core/Grid";
 import { ButtonBase } from '@material-ui/core';
 import { Link } from 'react-router-dom';
-
-const hashtags = [
-    "خبرهای_داغ",
-    "ویروس_کرونا",
-    "قیمت_دلار",
-    "بورس",
-    "هنر"
-]
+import {getHashtags} from '../../api/api_tweet';
 
 const RightSidebar = () => {
     const classes = useStyle();
+
+    const [hashtags,setHashtags] = useState ([]);
+
+    useEffect(() => {
+        getHashtags((isOk,data) => {
+            if(!isOk)
+            return alert("نا موفق")
+           setHashtags(data)
+        })
+    }, []);
+
 
     return (
         <div className={classes.root}>
