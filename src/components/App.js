@@ -5,11 +5,15 @@ import Home from '../pages/home/Home';
 import P404 from '../pages/404/404';
 import TweetsByHashtag from '../pages/tweetsByHashtag/TweetsByHashtag';
 import TweetsByUser from '../pages/tweetsByUser/TweetsByUser';
+import AuthPage from '../pages/auth/AuthPage';
 
 const App = () => {
     return (
 
         <BrowserRouter>
+        <Switch>
+            <Route path="/login" component={AuthPage}/>
+            <Route path={"/"} render={() =>
              <Layout>
                     <Switch>
                         <Route exact path={"/"} component={Home} />
@@ -18,7 +22,8 @@ const App = () => {
                         <Route component={P404} />
                     </Switch>
                 </Layout>
-           
+            }/>
+            </Switch>
         </BrowserRouter>
 
     );
